@@ -1,0 +1,29 @@
+{
+  "name": "md-to-cwm",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:KeisukeKudo/md-to-cwm.git",
+  "author": "KeisukeKudo <melchior.balthasar.casper326@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "dev": "npm run develop",
+    "develop": "NODE_ENV=development ./node_modules/.bin/webpack-cli --progress",
+    "watch": "./node_modules/.bin/webpack-cli --watch --progress",
+    "prod": "npm run production",
+    "production": "NODE_ENV=production ./node_modules/.bin/webpack-cli --progress",
+    "start": "webpack-dev-server"
+  },
+  "dependencies": {
+    "css-loader": "^3.2.0",
+    "lodash": "^4.17.15",
+    "marked": "^0.7.0",
+    "monaco-editor": "0.15.1",
+    "monaco-editor-webpack-plugin": "^1.7.0",
+    "style-loader": "^1.0.0",
+    "webpack": "^4.39.2",
+    "webpack-cli": "^3.3.7"
+  },
+  "devDependencies": {
+    "webpack-dev-server": "^3.8.0"
+  }
+}
