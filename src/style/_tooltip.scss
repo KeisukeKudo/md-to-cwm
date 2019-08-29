@@ -1,0 +1,42 @@
+$tooltip-color: rgba(10, 10, 10, .8);
+
+.tooltip {
+  position: relative;
+
+  &::before,
+  &::after {
+    position: absolute;
+    transition: all 0.6s ease 0s;
+    opacity: 0;
+  }
+
+  &::before {
+    content: "";
+    border: 10px solid transparent;
+    border-bottom-color: $tooltip-color;
+    top: 10px;
+    right: 5px;
+  }
+
+  &::after {
+    content: attr(data-tooltip);
+    display: block;
+    padding: 10px;
+    background: $tooltip-color;
+    color: $font-color;
+    border-radius: 5px;
+    top: 30px;
+    right: 0;
+  }
+
+  &.active {
+    &::before {
+      top: 21px;
+      opacity: .8;
+    }
+    &::after{
+      top: 41px;
+      opacity: .8;
+      }
+  }
+}

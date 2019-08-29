@@ -1,0 +1,66 @@
+#editor, #view {
+  height: 100vh;
+  font-size: initial;
+}
+
+#editor {
+  width: calc(50vw - 14px);
+  max-width: calc(50vw - 14px);
+  margin-right: 14px;
+}
+
+#view {
+  width: 50vw;
+  max-width: 50vm;
+  position: relative;
+  overflow-y: auto;
+
+  #button {
+    position: fixed;
+    right: 5px;
+    top: 5px;
+    background-color: rgba(30, 30, 30, .8);
+    z-index: 1000;
+    
+    span {
+      display: inline-block;
+      width: 30px;
+      height: 30px;
+      padding: 5px;
+      text-align: center;
+      border-radius: 3px;
+
+      &:first-of-type {
+        margin-right: -10px;
+      }
+
+      &:hover {
+        background-color: rgba(45, 45, 45, .8);
+      }
+
+      .icon {
+        &::before {
+          display: inline-block;
+          font-size: 20px;
+          color: #9D9D9D;
+        }
+      }
+    }
+  }
+}
+
+#view-result {
+  height: 100%;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 21px;
+}
+
+.monaco-editor {
+  margin: 10px;
+  word-wrap: break-word;
+}
+.content {
+  display: inline-block;
+  vertical-align: top;
+}

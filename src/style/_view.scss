@@ -1,0 +1,70 @@
+#view-result {
+
+  h1, h2, h3,
+  h4, h5, h6 {
+    line-height: normal;
+  }
+  /* Code section */
+  pre, p > code {
+    background-color: $light-gray;
+    padding: 10px;
+    border-radius: 3px;
+  }
+
+  p > code {
+    color: #D69D85;
+  }
+  
+  /* unordered list */
+  ul, ol {
+    padding-left: 20px;
+  }
+
+  /* Table */
+  table{
+    border-collapse: collapse;
+    border-spacing: 0;
+
+    th,
+    td{
+      padding: 10px;
+    }
+    
+    tr{
+      border-bottom: solid 1px #333;
+    }
+  }
+
+  // image
+  img {
+    border-radius: 3px;
+  }
+
+  /* Quote */
+  blockquote {
+    position: relative;
+    margin: 5px 0;
+    padding: 8px 15px;
+    background-color: $light-gray;
+    color: $font-color;
+    border-radius: 3px;
+  
+    &:before{
+      display: inline-block;
+      position: absolute;
+      top: 13px;
+      left: 15px;
+      color: #cfcfcf;
+      font-size: 28px;
+      line-height: 1;
+      font-weight: 900;
+    }
+  
+    p {
+      padding: 0;
+      margin: 10px 0;
+      line-height: 1.7;
+      font-style: italic;
+    }
+  }
+}
