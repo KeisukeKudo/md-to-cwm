@@ -4,11 +4,23 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible">
-  <title>Document</title>
+  <title>md-to-cwm</title>
+
+  <style>
+  </style>
+  <link href="//unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css" rel="stylesheet">
 </head>
 <body>
-  <div id="container" style="height:500px"></div>
-
+  <div class="main">
+      <div id="editor" class="content"></div>
+      <div id="view" class="content">
+        <div id="button" class="none">
+          <span id="copy" class="tooltip" data-tooltip="Copy!!"><i class="icon ion-md-copy"></i></span>
+          <span id="switch"><i class="icon ion-md-switch"></i></span>
+        </div>
+        <div id="view-result" class="monaco-editor mac vs-dark"></div>
+      </div>
+  </div>
   <script src="./dist/app.js"></script>
 </body>
 </html>
