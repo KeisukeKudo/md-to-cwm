@@ -12,8 +12,8 @@ https://confluence.atlassian.com/display/CONF42/Confluence+Wiki+Markup
 - Firefox
 
 ## How to use
-Enter markdown on the left view.
-On the right is the preview screen.
-Click the icon on the top right to copy confluence wiki markup.
-Copy button does not work on browsers that do not support clipboard api.
-The toggle button toggles between HTML view and confluence wiki markup view.
+Enter markdown on the left view.  
+On the right is the preview screen.  
+Click the icon on the top right to copy confluence wiki markup.  
+Copy button does not work on browsers that do not support clipboard api.  
+The toggle button toggles between HTML view and confluence wiki markup view.  
