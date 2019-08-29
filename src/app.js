@@ -2,7 +2,6 @@ import * as monacoEditor from './monacoEditor.js';
 import { throttle } from 'lodash';
 import { fetchInputValue } from './indexedDB/dbAccess.js'
 import { toHTML, toCWM } from './markdownConverter.js';
-import './style/app.scss';
 
 // worker
 import SaveWorker from './worker/saveInput.worker.js';
