@@ -1,7 +1,9 @@
+import { defaultValue } from '../config.js';
+
 const version = 1;
 const DATABASE_NAME = 'input_data';
 const STORE_NAME = 'input_store';
-const DEFAULT_VALUE = '# Hello World'
+const DEFAULT_VALUE = defaultValue;
 
 /**
  * @type {Object} columnName
