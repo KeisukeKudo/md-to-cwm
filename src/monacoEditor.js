@@ -16,6 +16,7 @@ export function creater(dom, value) {
     theme: "vs-dark",
     automaticLayout: true,
     wordWrap: 'on',
+    contextmenu: false,
     minimap: {
       enabled: false
     }
