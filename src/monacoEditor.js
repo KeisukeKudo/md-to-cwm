@@ -19,6 +19,11 @@ export function creater(dom, value) {
     contextmenu: false,
     minimap: {
       enabled: false
+    },
+    scrollbar: {
+      useShadows: false,
+      varticalHasArrows: false,
+      verticalScrollbarSize: 8
     }
   });
 }
