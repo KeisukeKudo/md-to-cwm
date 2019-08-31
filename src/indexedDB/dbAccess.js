@@ -1,6 +1,6 @@
 import { defaultValue } from '../config.js';
 
-const version = 1;
+const version = 2;
 const DATABASE_NAME = 'input_data';
 const STORE_NAME = 'input_store';
 const DEFAULT_VALUE = defaultValue;
@@ -30,8 +30,10 @@ function open(success, error) {
   const request = indexedDB.open(DATABASE_NAME, version);
   request.onupgradeneeded = event => {
     const db = event.target.result;
-    db.createObjectStore(STORE_NAME, { keyPath: columnName.KEY });
-    put(event.target.transaction, DEFAULT_VALUE);
+    if (!db.objectStoreNames.contains(STORE_NAME)) {
+      db.createObjectStore(STORE_NAME, { keyPath: columnName.KEY });
+    }
+    put(event.target.transaction, new TextEncoder().encode(DEFAULT_VALUE));
   }
 
   request.onsuccess = success;
@@ -63,7 +65,11 @@ export async function fetchInputValue() {
       const trans = db.transaction(STORE_NAME, 'readonly');
       const req = trans.objectStore(STORE_NAME).get(ID);
       req.onsuccess = event => {
-        resolve(event.target.result[columnName.INPUT]);
+        resolve(
+          new TextDecoder().decode(
+            event.target.result[columnName.INPUT]
+          )
+        );
       }
       req.onerror = e => {
         resolve(DEFAULT_VALUE);
@@ -78,8 +84,7 @@ export async function fetchInputValue() {
 export async function putInputValue(value) {
   return new Promise((resolve, reject) => {
     open(event => {
-      const trans = event.target.result.transaction(STORE_NAME, 'readwrite');
-      put(trans, value);
+      put(event.target.result.transaction(STORE_NAME, 'readwrite'), value);
       resolve();
     },
       reject
