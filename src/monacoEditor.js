@@ -20,10 +20,10 @@ export function creater(dom, value) {
     minimap: {
       enabled: false
     },
+    smoothScrolling: true,
     scrollbar: {
       useShadows: false,
-      varticalHasArrows: false,
-      verticalScrollbarSize: 8
+      verticalScrollbarSize: 8,
     }
   });
 }

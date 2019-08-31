@@ -24,7 +24,7 @@ a {
 $scrollbar-thumb-color: rgba(121, 121, 121, .4);
 
 .custom-scrollbar {
-  scrollbar-color: $base-color $scrollbar-thumb-color;
+  scrollbar-color: $scrollbar-thumb-color $base-color;
   scrollbar-width: thin;
 
   &::-webkit-scrollbar{
