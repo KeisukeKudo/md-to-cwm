@@ -7,13 +7,17 @@
   /* Code section */
   pre, p > code {
     background-color: $light-gray;
-    padding: 10px;
     border-radius: 3px;
+  }
+
+  pre {
+    padding: 10px;
   }
 
   p > code {
     display: inline-block;
     color: #D69D85;
+    padding: 1px 5px;
   }
   
   /* unordered list */
