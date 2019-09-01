@@ -21,8 +21,27 @@
   }
   
   /* unordered list */
-  ul, ol {
+  ul {
     padding-left: 20px;
+  }
+
+  ol {
+    counter-reset: item;
+    list-style-type: none;
+    padding-left: 0;
+    
+    li{
+      text-indent: -18px;
+      padding-left: 18px;
+
+      &:before {
+        counter-increment: item;
+        content: counter(item)'.';
+        padding-right: 3px;
+        padding-left: 3px;
+        color: $font-color;
+      }
+    }
   }
 
   /* Table */
