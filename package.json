@@ -17,7 +17,7 @@
     "css-loader": "^3.2.0",
     "dompurify": "^1.0.11",
     "highlight.js": "^9.15.10",
-    "lodash": "^4.17.15",
+    "lodash": "^4.17.19",
     "marked": "^0.7.0",
     "mini-css-extract-plugin": "^0.8.0",
     "monaco-editor": "0.15.1",
